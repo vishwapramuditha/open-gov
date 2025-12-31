@@ -9,7 +9,7 @@
 
 ---
 
-## 🚀 Why We Built This
+## Why We Built This
 We believe that **data belongs to the people**. 
 
 Too often, critical information about our nation's health is buried in PDF reports or complex spreadsheets. OpenGov transforms this raw data into **interactive, real-time visualizations** that tell a story. We aim to:
@@ -19,38 +19,38 @@ Too often, critical information about our nation's health is buried in PDF repor
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
-### ⚡ The Command Center (Dashboard)
+### The Command Center (Dashboard)
 A real-time "Bloomberg Terminal" for citizens.
 - **Live Debt Clock**: Watch the national interest accumulate second-by-second.
 - **Breaking News**: A scrolling ticker of the latest cabinet decisions.
 - **Economic Vitals**: Instant view of Inflation, GDP, and Reserves.
 
-### 🏛️ MP Watch (`/representatives`)
+### MP Watch (`/representatives`)
 Know who you voted for.
 - **Attendance Records**: See which MPs are showing up to Parliament.
 - **Voting History**: Track their stance on major bills (Online Safety, Budget).
 - **Budget Utilization**: Are they spending their decentralized funds?
 
-### 📢 Whistleblower Portal (`/report`)
+### Whistleblower Portal (`/report`)
 A safe space for integrity.
 - **Secure Reporting**: Anonymous form connected directly to integrity officers.
 - **Encrypted**: Priority on user privacy and safety.
 
-### 🧾 Tax Impact Calculator (`/tax-calculator`)
+### Tax Impact Calculator (`/tax-calculator`)
 Make it personal.
 - Enter your salary and see **exactly** what your tax pays for.
 - *"Your contribution funded 50 School Lunches."*
 
-### ⏳ Economic Timeline (`/timeline`)
+### Economic Timeline (`/timeline`)
 Context matters.
 - A vertical history of Sri Lanka's journey from 2010-2024.
 - Visualize the link between **Mega Debt** events and **Development** milestones.
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 Built with modern, performance-first web technologies.
 - **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/) (Dark Mode & Glassmorphism)
@@ -59,7 +59,7 @@ Built with modern, performance-first web technologies.
 
 ---
 
-## 📦 Getting Started
+## Getting Started
 
 We welcome developers, designers, and data scientists to contribute.
 
@@ -88,7 +88,7 @@ OpenGov is **Open Source**. We need your help to:
 2.  **Add Features**: Build new widgets or visualizations.
 3.  **Translate**: Help us localize into Sinhala and Tamil.
 
-Please see `CONTRIBUTING.md` (coming soon) for details.
+Please see `CONTRIBUTING.md` for details.
 
 ---
 
@@ -98,4 +98,4 @@ Please see `CONTRIBUTING.md` (coming soon) for details.
 
 ---
 
-*Built with ❤️ for Sri Lanka.*
+*Built with ❤️ for Sri Lanka | Vishwa Pramuditha*
