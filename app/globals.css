@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-lion-gold: #D4AF37;
+  --color-deep-blue: #002147;
+}
+
+/* Optional Light Mode toggle support later, but default is Dark */
+@media (prefers-color-scheme: light) {
+
+  /* Keeping dark mode forced for this "Bloomberg" terminal feel as requested */
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.glass-panel {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-xl shadow-xl;
+}
+
+.glass-input {
+  @apply bg-black/20 border border-white/10 rounded-lg focus:border-lion-gold/50 focus:ring-1 focus:ring-lion-gold/50 text-white placeholder-gray-500 backdrop-blur-sm;
+}
