@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">OpenGov LK</string>
+    <string name="title_activity_main">OpenGov LK</string>
+    <string name="package_name">com.opengov.lk</string>
+    <string name="custom_url_scheme">com.opengov.lk</string>
+</resources>

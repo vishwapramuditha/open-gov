@@ -16,6 +16,13 @@ export async function generateMetadata(props: { params: Promise<{ id: string }> 
     };
 }
 
+// Required for static export (Mobile App)
+export async function generateStaticParams() {
+    return MPS_DATA.map((mp) => ({
+        id: mp.id.toString(),
+    }));
+}
+
 export default async function RepresentativeProfile(props: { params: Promise<{ id: string }> }) {
     const params = await props.params;
     const mp = MPS_DATA.find((m) => m.id === Number(params.id));
@@ -137,7 +144,7 @@ export default async function RepresentativeProfile(props: { params: Promise<{ i
                                         <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-black/40 border border-white/5">
                                             {getVoteIcon(record.vote)}
                                             <span className={`text-sm font-bold ${record.vote === 'Sim' ? 'text-green-500' :
-                                                    record.vote === 'Não' ? 'text-red-500' : 'text-gray-400'
+                                                record.vote === 'Não' ? 'text-red-500' : 'text-gray-400'
                                                 }`}>
                                                 {record.vote}
                                             </span>
