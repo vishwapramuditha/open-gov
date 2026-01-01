@@ -1,7 +1,9 @@
 # OpenGov Sri Lanka 🇱🇰
 ### The National Transparency Dashboard
 
-![OpenGov Hero](/opengov-banner.png)
+<p align="center">
+  <img src="https://github.com/vishwapramuditha/open-gov/blob/main/lib/git-bg.jpeg?raw=true" alt="OpenGov Sri Lanka Banner" />
+</p>
 
 > **"Democracy requires a well-informed citizenry."**
 
