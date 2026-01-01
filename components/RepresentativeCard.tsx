@@ -70,6 +70,9 @@ export default function RepresentativeCard({ mp }: { mp: MPProps }) {
             <div className="absolute top-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition-opacity">
                 <div className={`w-2 h-2 rounded-full ${mp.attendance > 75 ? 'bg-green-500' : 'bg-red-500'}`}></div>
             </div>
+
+            {/* Overlay Link */}
+            <a href={`/representatives/${mp.id}`} className="absolute inset-0 z-10" aria-label={`View profile of ${mp.name}`}></a>
         </div>
     );
 }
