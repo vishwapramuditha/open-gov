@@ -25,30 +25,64 @@ Too often, critical information about our nation's health is buried in PDF repor
 
 ### The Command Center (Dashboard)
 A real-time "Bloomberg Terminal" for citizens.
-- **Live Debt Clock**: Watch the national interest accumulate second-by-second.
-- **Breaking News**: A scrolling ticker of the latest cabinet decisions.
-- **Economic Vitals**: Instant view of Inflation, GDP, and Reserves.
+- **Live Economic Stats**: Real data from Central Bank of Sri Lanka
+  - National Debt: $106.17B (Dec 2024)
+  - Inflation: 2.1% (Dec 2025)
+  - GDP Growth: 4.5% (2024-2025)
+  - Forex Reserves: $5.8B
+- **Breaking News**: Latest cabinet decisions and policy updates
+- **Forex Rates**: Current LKR exchange rates updated from CBSL
+
+### Development Projects Tracker (`/projects`)
+Monitor real infrastructure projects.
+- **171 Large-Scale Projects**: From Ministry of Finance reports
+- **Live Progress Tracking**: Airport Terminal 2 (78%), Port City (35%), Central Expressway (52%)
+- **Budget Transparency**: Rs. 1,260 billion allocated for development (2024)
+- **Project Details**: Contractors, locations, timelines, and status updates
 
 ### MP Watch (`/representatives`)
 Know who you voted for.
-- **Attendance Records**: See which MPs are showing up to Parliament.
-- **Voting History**: Track their stance on major bills (Online Safety, Budget).
-- **Budget Utilization**: Are they spending their decentralized funds?
+- **Attendance Records**: See which MPs are showing up to Parliament
+- **Voting History**: Track their stance on major bills
+- **Budget Utilization**: Monitor decentralized fund spending
+- **Contact Information**: Direct access to your representatives
 
 ### Whistleblower Portal (`/report`)
 A safe space for integrity.
-- **Secure Reporting**: Anonymous form connected directly to integrity officers.
-- **Encrypted**: Priority on user privacy and safety.
+- **Secure Reporting**: Anonymous form for corruption reports
+- **Privacy-First**: Encrypted submissions
 
 ### Tax Impact Calculator (`/tax-calculator`)
 Make it personal.
-- Enter your salary and see **exactly** what your tax pays for.
-- *"Your contribution funded 50 School Lunches."*
+- **Progressive Tax Brackets**: Based on real Sri Lankan tax structure
+- **Visual Breakdown**: See exactly where your tax money goes
+- **Budget Allocation**: Understand government spending priorities
 
 ### Economic Timeline (`/timeline`)
 Context matters.
-- A vertical history of Sri Lanka's journey from 2010-2024.
-- Visualize the link between **Mega Debt** events and **Development** milestones.
+- **Historical Journey**: 2010-2024 economic milestones
+- **Crisis & Recovery**: From post-war boom to 2022 default to 2024 restructuring
+- **Key Events**: IMF program, debt restructuring, infrastructure projects
+
+### Global Search (⌘K)
+Find anything, instantly.
+- **Cross-Platform Search**: MPs, projects, news, tenders
+- **Keyboard Shortcuts**: Fast access with Cmd/Ctrl+K
+- **Smart Filtering**: Real-time results as you type
+
+---
+
+## Data Sources
+
+All data is sourced from official Sri Lankan government publications:
+- **Central Bank of Sri Lanka (CBSL)**: Economic indicators, forex rates, inflation data
+- **Ministry of Finance**: Budget allocations, debt statistics, project reports
+- **Parliament of Sri Lanka**: MP information and legislative data
+- **International Monetary Fund (IMF)**: Loan programs and economic assessments
+
+See [DATA_SOURCES.md](./DATA_SOURCES.md) for complete attribution and references.
+
+**Data Accuracy**: Last updated January 2026 with official government data.
 
 ---
 

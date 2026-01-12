@@ -1,5 +1,7 @@
-import { MapPin, Building2, CalendarClock } from "lucide-react";
-import clsx from "clsx";
+'use client';
+
+import { MapPin, Building2, TrendingUp } from "lucide-react";
+import { Badge } from "@/components/ui/Badge";
 
 type ProjectProps = {
     name: string;
@@ -13,54 +15,68 @@ type ProjectProps = {
 };
 
 export default function ProjectCard({ project }: { project: ProjectProps }) {
-    const statusColor = clsx({
-        'bg-green-100 text-green-700': project.status === 'Completed',
-        'bg-blue-100 text-blue-700': project.status === 'In Progress' || project.status === 'Ongoing',
-        'bg-yellow-100 text-yellow-700': project.status === 'Planned',
-        'bg-red-100 text-red-700': project.status === 'Stalled',
-    });
+    const getStatusVariant = (status: string) => {
+        switch (status) {
+            case 'Completed':
+                return 'success';
+            case 'In Progress':
+            case 'Ongoing':
+                return 'info';
+            case 'Planned':
+                return 'warning';
+            case 'Stalled':
+                return 'danger';
+            default:
+                return 'default';
+        }
+    };
 
     return (
-        <div className="glass-panel p-6 group hover:bg-white/10 transition-colors">
+        <div className="group bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-lion-gold/50 hover:shadow-xl hover:shadow-lion-gold/10 transition-all duration-300 hover:-translate-y-1 animate-scale-in">
             <div className="flex justify-between items-start mb-4">
-                <div>
+                <div className="flex-1">
                     <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">{project.ministry}</span>
-                    <h3 className="font-bold text-lg text-white mt-1 group-hover:text-lion-gold transition-colors">{project.name}</h3>
+                    <h3 className="font-bold text-lg text-white mt-1 group-hover:text-lion-gold transition-colors line-clamp-2">
+                        {project.name}
+                    </h3>
                 </div>
-                <span className={`px-3 py-1 rounded-full text-xs font-semibold ${statusColor}`}>
+                <Badge variant={getStatusVariant(project.status)} className="ml-2 flex-shrink-0">
                     {project.status}
-                </span>
+                </Badge>
             </div>
 
-            <p className="text-gray-400 text-sm mb-6 line-clamp-2">
+            <p className="text-gray-400 text-sm mb-6 line-clamp-2 leading-relaxed">
                 {project.description}
             </p>
 
             <div className="space-y-3 text-sm text-gray-400">
                 <div className="flex items-center gap-2">
-                    <MapPin size={16} />
+                    <MapPin size={16} className="text-lion-gold flex-shrink-0" />
                     <span>{project.location}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                    <Building2 size={16} />
-                    <span>Contractor: {project.contractor}</span>
+                    <Building2 size={16} className="text-lion-gold flex-shrink-0" />
+                    <span className="truncate">Contractor: {project.contractor}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                    <CalendarClock size={16} />
+                    <TrendingUp size={16} className="text-lion-gold flex-shrink-0" />
                     <span>Progress: <span className="text-white font-bold">{project.progress}%</span></span>
                 </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-white/10 flex justify-between items-center">
-                <div className="text-xs text-gray-500">Total Budget</div>
-                <div className="font-bold text-white">{project.budget}</div>
+            <div className="mt-6 pt-4 border-t border-gray-800 flex justify-between items-center">
+                <div className="text-xs text-gray-500 uppercase tracking-wider">Total Budget</div>
+                <div className="font-bold text-lion-gold">{project.budget}</div>
             </div>
 
-            <div className="w-full bg-gray-800 h-1.5 mt-4 rounded-full overflow-hidden">
+            {/* Animated Progress Bar */}
+            <div className="w-full bg-gray-800 h-2 mt-4 rounded-full overflow-hidden">
                 <div
-                    className="bg-lion-gold h-full"
+                    className="bg-gradient-to-r from-lion-gold to-yellow-500 h-full transition-all duration-1000 ease-out rounded-full"
                     style={{ width: `${project.progress}%` }}
-                ></div>
+                >
+                    <div className="h-full w-full bg-white/20 animate-pulse"></div>
+                </div>
             </div>
         </div>
     );

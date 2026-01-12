@@ -5,6 +5,7 @@ import { Scale, Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import { useState } from 'react';
+import { GlobalSearch } from './GlobalSearch';
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -45,13 +46,9 @@ export default function Navbar() {
                 </div>
 
                 <div className="flex items-center gap-4">
-                    {/* Search Bar (Desktop) */}
-                    <div className="hidden lg:flex items-center bg-white/5 border border-white/10 rounded-full px-3 py-1.5 focus-within:border-lion-gold/50 transition-colors">
-                        <input
-                            type="text"
-                            placeholder="Search data..."
-                            className="bg-transparent border-none outline-none text-xs text-white placeholder-gray-500 w-32 focus:w-48 transition-all"
-                        />
+                    {/* Global Search */}
+                    <div className="hidden lg:block">
+                        <GlobalSearch />
                     </div>
 
                     {/* Language Switcher */}

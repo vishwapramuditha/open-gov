@@ -1,4 +1,6 @@
-import { ArrowDown, ArrowUp, Minus } from "lucide-react";
+'use client';
+
+import { ArrowDown, ArrowUp } from "lucide-react";
 
 type StatProps = {
     label: string;
@@ -11,26 +13,17 @@ export default function StatCard({ label, value, trend, change }: StatProps) {
     const isPositive = trend === 'up';
     const isNegative = trend === 'down';
 
-    // Determine color based on context (Debt going down is good green, Inflation going down is good green usually, but let's keep it simple: generic Green for positive outcome, Red for negative)
-    // Actually, usually in dashboard: green = good, red = bad.
-    // Inflation down -> Green. GDP Up -> Green. Debt Down -> Green.
-    // Let's rely on manual styling logic for now or generic colors based on visual trend arrows.
-
-    // For simplicity in this mock: Green Arrow Up, Red Arrow Down.
-    // BUT: Debt down is Good. GDP Down is Bad.
-    // Let's assume standard financial colors: Up = Green, Down = Red (unless overridden).
-    // Let's just use standard visual mapping for now: Up=Green, Down=Red.
-
-    const colorClass = isPositive ? 'text-green-600' : 'text-red-600';
-    const bgClass = isPositive ? 'bg-green-50' : 'bg-red-50';
+    const colorClass = isPositive ? 'text-green-400' : isNegative ? 'text-red-400' : 'text-gray-400';
+    const bgClass = isPositive ? 'bg-green-900/20' : isNegative ? 'bg-red-900/20' : 'bg-gray-800/20';
+    const borderClass = isPositive ? 'border-green-800/30' : isNegative ? 'border-red-800/30' : 'border-gray-700/30';
     const Icon = isPositive ? ArrowUp : ArrowDown;
 
     return (
-        <div className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm flex flex-col items-center text-center hover:shadow-md transition-shadow">
-            <h3 className="text-gray-500 text-xs uppercase font-semibold tracking-wider">{label}</h3>
-            <div className="text-2xl font-bold text-deep-blue my-2">{value}</div>
-            <div className={`flex items-center gap-1 text-xs font-medium px-2 py-1 rounded-full ${bgClass} ${colorClass}`}>
-                <Icon size={12} />
+        <div className="group bg-gray-900 border border-gray-800 rounded-xl p-4 hover:border-gray-700 hover:shadow-lg hover:shadow-gray-900/50 transition-all duration-300 hover:-translate-y-1 animate-scale-in">
+            <h3 className="text-gray-500 text-xs uppercase font-semibold tracking-wider mb-2">{label}</h3>
+            <div className="text-2xl md:text-3xl font-bold text-white mb-2 group-hover:text-lion-gold transition-colors">{value}</div>
+            <div className={`inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full border ${bgClass} ${colorClass} ${borderClass}`}>
+                <Icon size={12} className="animate-pulse" />
                 {change}
             </div>
         </div>
